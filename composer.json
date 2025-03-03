@@ -1,0 +1,22 @@
+{
+    "description": "Projeto ADM-PHP",
+
+    "authors": [
+        {
+            "name": "Franklin da Silva",
+            "email": "frsbatist@gmail.com",
+            "homepage": "https://github.com/franklyk",
+            "role": "dev"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Core\\" : "Core",
+            "App\\" : "app",
+            "Adms\\" : "app/adms"
+        }
+    },
+
+    "require": {}
+}
