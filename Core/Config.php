@@ -10,7 +10,8 @@ abstract class Config
 
         define('CONTROLLER', 'Login');
         define('METODO', 'index');
-        define('CONTROLLER_ERRO', 'Erro');
+        define('HOME', 'Home');
+        define('CONTROLLER_ERRO', 'ErroHome');
 
         define('EMAILADM', 'adm@email.com');
     }

@@ -12,7 +12,7 @@ class ViewUser
 
         $this->data = [];
 
-        $loadView = new \Core\ConfigView("users/viewUser", $this->data);
+        $loadView = new \Core\ConfigView("adms/Views/users/viewUser", $this->data);
         $loadView->loadView();
     }
 }

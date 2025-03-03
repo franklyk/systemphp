@@ -12,7 +12,7 @@ class Login
 
         $this->data = null;
 
-        $loadView = new \Core\ConfigView("login/login", $this->data);
+        $loadView = new \Core\ConfigView("adms/Views/login/login", $this->data);
         $loadView->loadView();
     }
 }
