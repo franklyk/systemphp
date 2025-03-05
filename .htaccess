@@ -1,6 +1,16 @@
 #RewriteEngine on aciona o mecanismo de reescrita
-
 RewriteEngine on 
+
+Options All -Indexes
+
+# WWW REDIRECT
+# RewriteCond %(HTTP_HOST) !^www\.{NC}
+# RewriteRule ^https://www.%(HTTP_HOST)%{REQUEST_URI}[L,R=301]
+
+# HTTPS REDIRECT
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^https://www.%(HTTP_HOST)%{REQUEST_URI}[L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 
@@ -9,3 +19,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+ErrorDocument 403 login

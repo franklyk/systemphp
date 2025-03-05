@@ -22,12 +22,12 @@ class ConfigController extends Config
         $this->configAdm();
         $this->urlClean = new \Core\helper\CleanUrl();
         $this->urlSlug = new \Core\helper\Slugs();
-        
+
         if (!empty(filter_input(INPUT_GET, 'url', FILTER_DEFAULT))) {
             $this->url = filter_input(INPUT_GET, 'url', FILTER_DEFAULT);
-            
+
             $this->url = $this->urlClean->clearUrl($this->url);
-            
+
             $this->urlArray = explode("/", $this->url);
 
             if (isset($this->urlArray[0])) {
@@ -35,6 +35,8 @@ class ConfigController extends Config
             }
             if (isset($this->urlArray[1])) {
                 $this->urlMetodo = $this->urlSlug->slugMetodo($this->urlArray[1]);
+            } else {
+                $this->urlMetodo = $this->urlSlug->slugMetodo(METODO);
             }
             if (isset($this->urlArray[2])) {
                 $this->urlParametro = $this->urlArray[2];
@@ -44,7 +46,6 @@ class ConfigController extends Config
             $this->urlMetodo = $this->urlSlug->slugMetodo(METODO);
             $this->urlParametro = '';
         }
-
     }
 
     public function loadPage(): void
@@ -53,6 +54,5 @@ class ConfigController extends Config
         $this->classLoad = "\\App\\adms\\Controllers\\" . $this->urlController;
         $classPage = new $this->classLoad();
         $classPage->{$this->urlMetodo}();
-
     }
 }
