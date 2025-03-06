@@ -5,7 +5,7 @@ namespace App\adms\Controllers;
 class Login
 {
     private object $connect;
-    private array|string|null $data = null;
+    private array|string|null $data = [];
     private array|null $formData;
 
     public function index(): void

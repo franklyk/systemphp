@@ -40,6 +40,8 @@ class ConfigController extends Config
             }
             if (isset($this->urlArray[2])) {
                 $this->urlParametro = $this->urlArray[2];
+            }else {
+                $this->urlParametro = '';
             }
         } else {
             $this->urlController = $this->urlSlug->slugController(HOME);
@@ -51,8 +53,8 @@ class ConfigController extends Config
     public function loadPage(): void
     {
 
-        $this->classLoad = "\\App\\adms\\Controllers\\" . $this->urlController;
-        $classPage = new $this->classLoad();
-        $classPage->{$this->urlMetodo}();
+        $loadPage = new \Core\ConfigAccessPg();
+        $loadPage->loadPage($this->urlController,$this->urlMetodo,$this->urlParametro);
+
     }
 }

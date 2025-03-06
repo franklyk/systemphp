@@ -2,17 +2,16 @@
 
 namespace App\adms\Controllers;
 
-class Erro
+class Error404
 {
-    private array|string|null $data;
+    private string|null $data = null;
 
     public function index( ): void
     {
-        echo 'Página de Erro! <br><br>';
 
         $this->data = '<p style=color:#f00;>Pagina não encontrada!</p>';
 
-        $loadView = new \Core\ConfigView("adms/Views/erro/erro", $this->data);
+        $loadView = new \Core\ConfigView("adms/Views/erro404/erro404", $this->data);
         $loadView->loadView();
     }
 }
