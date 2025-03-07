@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+
+if (isset($_SESSION['msg'])) {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}
+
+
+// unset($_SESSION['user_id']);
+// unset($_SESSION['user_name']);
+// unset($_SESSION['user_nickname']);
+// unset($_SESSION['user_email']);
+// unset($_SESSION['user_image']);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

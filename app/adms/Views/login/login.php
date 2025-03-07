@@ -10,10 +10,6 @@ if (isset($this->data['form'])) {
 
 // echo password_hash("123456a", PASSWORD_DEFAULT);
 
-if (isset($_SESSION['msg'])) {
-    echo $_SESSION['msg'];
-    unset($_SESSION['msg']);
-}
 
 ?>
 
