@@ -12,7 +12,7 @@ class ConfigAccessPg
     private string $classLoad;
 
     private array $listPgPublic = ["Home","Login", "Error404"];
-    private array $listPgPrivate = ["Dashboard", "Users", "ViewUser"];
+    private array $listPgPrivate = ["Dashboard", "Users", "ViewUser", "Logout"];
 
     public function loadPage(string|null $urlController, string|null $urlMetodo, string|null $urlParametro,): void
     {
