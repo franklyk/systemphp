@@ -27,3 +27,5 @@ if (isset($this->data['form'])) {
     <button type="submit">Acessar</button>
 
 </form>
+
+<p>Para se cadastrar <a href="<?php echo URLADM; ?>new-user">Clique Aqui</a>.</p>

@@ -7,7 +7,6 @@ abstract class Config
     protected function configAdm()
     {
         define('URLADM', 'http://localhost/systemphp/');
-        // define('URLADM', 'https://versite.click/');
 
         define('CONTROLLER', 'Login');
         define('METODO', 'index');

@@ -2,10 +2,10 @@
 
 namespace App\adms\Models;
 
-use \Core\helper\Connection;
+use \Core\helper\Connector;
 use PDO;
 
-class Login extends Connection
+class Login extends Connector
 {
     private object $connection;
     private array|null $data;

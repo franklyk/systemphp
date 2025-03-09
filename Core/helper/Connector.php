@@ -6,7 +6,7 @@ namespace Core\helper;
 use PDO;
 use PDOException;
 
-abstract class Connection
+abstract class Connector
 {
     private string $host = HOST;
     private string $user = USER;

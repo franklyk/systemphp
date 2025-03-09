@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use App\adms\Controllers\NewUser;
+
 class ConfigAccessPg
 {
     private string|null $urlController;
@@ -11,7 +13,7 @@ class ConfigAccessPg
 
     private string $classLoad;
 
-    private array $listPgPublic = ["Home","Login", "Error404"];
+    private array $listPgPublic = ["Home","Login","NewUser", "Error404"];
     private array $listPgPrivate = ["Dashboard", "Users", "ViewUser", "Logout"];
 
     public function loadPage(string|null $urlController, string|null $urlMetodo, string|null $urlParametro,): void
