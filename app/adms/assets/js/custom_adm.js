@@ -1,6 +1,5 @@
 const dataForm = document.querySelectorAll('[data-form="form"]');
 
-
 if (dataForm) {
     dataForm.forEach((form) => {
         form.addEventListener('submit', async(e)=> {

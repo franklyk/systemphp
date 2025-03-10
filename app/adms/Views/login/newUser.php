@@ -2,7 +2,7 @@
 $name = '';
 $email = '';
 $password = '';
-
+var_dump($this->data['form']);
 if (isset($this->data['form'])) {
     $valForm = $this->data['form'];
 
