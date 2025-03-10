@@ -11,13 +11,20 @@ class NewUser
     {
         $this->dataForm = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-
-
-        if($_POST){
+        if ($_POST) {
             $createNewUser = new \App\adms\Models\NewUser();
             $createNewUser->create($this->dataForm);
+            if ($createNewUser->getResult()) {
+                $urlRedirect = URLADM . "login";
+                header("Location: $urlRedirect");
+            } else {
+
+                $this->viewNewUser();
+            }
+        } else {
+
+            $this->viewNewUser();
         }
-        $this->viewNewUser();
     }
 
     private function viewNewUser()

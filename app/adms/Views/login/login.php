@@ -13,9 +13,9 @@ if (isset($this->data['form'])) {
 
 ?>
 
-
-
 <h1>Área Restrita</h1>
+
+<div id="msg"></div>
 <form action="" method="post">
 
     <label for="user">Usuário: </label>
