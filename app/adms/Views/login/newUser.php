@@ -6,7 +6,8 @@ $password = '';
 if (isset($this->data['form'])) {
     $valForm = $this->data['form'];
 
-    $user = $valForm['user'];
+    $name = $valForm['name'];
+    $email = $valForm['email'];
     $password = $valForm['password'];
 }
 
